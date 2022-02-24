@@ -1,0 +1,19 @@
+.post-root {
+  border-radius: 4px;
+  background-color: azure;
+  color: darkslategrey;
+  width: 400px;
+  display: inline-block;
+  min-height: 200px;
+  vertical-align: top;
+  margin-right: 4px;
+  margin-top: 4px;
+  border-style: solid;
+  border-color: aquamarine;
+  border-width: 2px;
+}
+
+.post-image {
+  max-height: 100%;
+  max-width: 100%;
+}
