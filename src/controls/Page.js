@@ -14,9 +14,8 @@ export class Page extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if(prevProps.data !== this.props.data)
-    {
-      this.setState({pageOffset:0});
+    if (prevProps.data !== this.props.data) {
+      this.setState({ pageOffset: 0 });
     }
   }
 
