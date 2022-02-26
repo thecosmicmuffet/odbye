@@ -13,6 +13,13 @@ export class Page extends React.Component {
     this.previousPage = this.previousPage.bind(this);
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if(prevProps.data !== this.props.data)
+    {
+      this.setState({pageOffset:0});
+    }
+  }
+
   useEffect() {}
 
   nextPage() {
@@ -41,7 +48,7 @@ export class Page extends React.Component {
       <div>
         <div>
           <input onClick={this.previousPage} value="<" type="button" />
-          {start+1} ({data.length})
+          {start + 1} ({data.length})
           <input onClick={this.nextPage} value=">" type="button" />
         </div>
         {pagePosts.map((post) => {
