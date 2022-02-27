@@ -9,7 +9,6 @@ function App() {
   const [displayData, setDisplayData] = useState(betterData);
   const [currentData, setCurrentData] = useState("Posts with comments");
   const downloadOrganizedJson = (json, name) => {
-
     if (organizedJson !== "") URL.revokeObjectURL(organizedJson);
     setOrganizedJson("");
 
@@ -24,6 +23,7 @@ function App() {
         newJson.set(element.id, {
           created_at: element.created_at,
           body: element.body,
+          reposted_body: element.reposted_body,
           mentioned_usernames: element.mentioned_usernames,
           comments: new Array(),
         });
