@@ -14,7 +14,7 @@ export default class Post extends React.Component {
       case "embed":
         return (
           <a href={fragment.data.url}>
-            <img className="post-image" src={fragment.data.thumbnailLargeUrl} />
+            <img className="post-image" src={fragment.data.thumbnailLargeUrl} alt={fragment.data.alt} />
           </a>
         );
       case "image":
